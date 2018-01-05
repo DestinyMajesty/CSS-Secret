@@ -1,0 +1,49 @@
+.chapter3{
+    .base{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .adaptive-ellipse{
+        .circle{
+            background: #2b3;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%
+        }
+        .ellipse{
+            background: #fb3;
+            width: 300px;
+            height: 200px;
+            border-radius: 50%
+        }
+        .half-ellipse{
+            background: #f13;
+            width: 300px;
+            height: 200px;
+            border-radius: 50%  e('/') 100% 100% 0 0;
+        }
+        .quarter-ellipse{
+            background: #f13;
+            width: 300px;
+            height: 200px;
+            border-radius: 100% 0 0 0;
+        }
+    }
+    .parallelogram{
+        .parallelogram-1{
+            position:relative;
+            color: white;
+            height: 100px;
+            width: 200px;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;right: 0;bottom: 0;left: 0;
+                z-index: -1;
+                background: repeating-linear-gradient(30deg, rgba(241,142,25,0.8) 0,rgba(241,142,25,0.8) 15px,rgba(241,142,25,0.5) 0,rgba(241,142,25,0.5) 30px);
+                transform: skew(30deg);
+            }
+        }
+    }
+}
