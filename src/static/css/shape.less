@@ -46,4 +46,43 @@
             }
         }
     }
+    .diamond{
+        .diamond-1 > img{
+            width: 300px;
+            clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
+        }
+        .circle-1 > img {
+            width: 300px;
+            clip-path:circle(30% at 50% 50%)
+        }
+    }
+
+    @angleColor:#fb3;
+    .angle{
+        div{
+            height: 100px;
+            width: 200px;
+        }
+        .one{
+            background: #58a;
+            background: linear-gradient(-135deg,transparent 15px,#58a 0);
+        }
+        .four{
+            background: @angleColor;
+            background: linear-gradient(135deg, transparent 15px, @angleColor 0) top left, linear-gradient(-135deg, transparent 15px, @angleColor 0) top right, linear-gradient(-45deg, transparent 15px, @angleColor 0) bottom right, linear-gradient(45deg, transparent 15px, @angleColor 0) bottom left;
+            background-size: 50% 50%;
+            background-repeat: no-repeat;
+        }
+        .four-mixin{
+            #beveled-corners(@angleColor,20px,10px);
+        }
+    }
+}
+
+// less的mixin写法
+#beveled-corners(@bg,@tl:0,@tr:@tl,@br:@tl,@bl:@tr){
+    background: @bg;
+    background: linear-gradient(135deg, transparent @tl, @bg 0) top left, linear-gradient(-135deg, transparent @tr, @bg 0) top right, linear-gradient(-45deg, transparent @br, @bg 0) bottom right, linear-gradient(45deg, transparent @bl, @bg 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
 }

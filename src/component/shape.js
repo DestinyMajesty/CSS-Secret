@@ -23,8 +23,19 @@ class Shape extends Component {
                 <h1>利用clip-path属性</h1>
                 <div className="diamond base">
                     <div className="diamond-1">
-                        // 用一张图片来试一试
+                        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1515383383749&di=bc5592e10b7e72085a2b2c031b66c834&imgtype=0&src=http%3A%2F%2Fimg2.niutuku.com%2Fdesk%2F1208%2F1712%2Fntk-1712-67346.jpg" alt="..."/>
                     </div>
+                    <div className="circle-1">
+                        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1515383383749&di=bc5592e10b7e72085a2b2c031b66c834&imgtype=0&src=http%3A%2F%2Fimg2.niutuku.com%2Fdesk%2F1208%2F1712%2Fntk-1712-67346.jpg" alt="..."/>
+                    </div>
+                </div>
+
+                {/* 切角效果的背景 */}
+                <h1>利用CSS渐变角度+透明色的效果</h1>
+                <div className="angle base">
+                    <div className="one">切一个角</div>
+                    <div className="four">切四个角</div>
+                    <div className="four-mixin">利用less的mixin切四个角</div>                    
                 </div>
             </div>
         );

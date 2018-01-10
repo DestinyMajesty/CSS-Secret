@@ -1,0 +1,114 @@
+.chapter4{
+    .base{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .shadow{
+        .common-shadow{
+            width: 150px;
+            height: 100px;
+            background: yellow;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+        .neighbor-shadow{
+            width: 150px;
+            height: 100px;
+            background: green;
+            box-shadow: 4px 4px 8px -4px rgba(0,0,0,0.5);
+        }
+        .bottom-shadow{
+            width: 150px;
+            height: 100px;
+            background: blanchedalmond;
+            box-shadow: 0px 4px 8px -4px rgba(0,0,0,0.5);
+        }
+        .right-shadow{
+            width: 150px;
+            height: 100px;
+            background: rgb(178, 158, 197);
+            box-shadow: 4px 0px 8px -4px rgba(0,0,0,0.5);
+        }
+        .left-shadow{
+            width: 150px;
+            height: 100px;
+            background: rgb(221, 118, 50);
+            box-shadow: -4px 0px 8px -4px rgba(0,0,0,0.5);
+        }
+        .left-right-shadow{
+            width: 150px;
+            height: 100px;
+            background: rgb(238, 130, 130);
+            box-shadow: -4px 0px 8px -4px rgba(0,0,0,0.5),4px 0px 8px -4px rgba(0,0,0,0.5);
+        }
+    }
+
+    .filter{
+        .circle-1 > img{
+            width: 300px;
+            clip-path:circle(30% at 50% 50%);
+            transition: 0.5s filter;
+            filter: grayscale(1);
+        }
+        .circle-1 > img:hover{
+            filter:none;
+        }
+    }
+
+    .glass{
+        .back{
+            width: 500px;
+            height: 500px;
+            background: url('../img/leilei.jpg');
+            background-size:500px 500px;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            z-index: -10;
+        }
+        main{
+            font-size: 20px;
+            width: 350px;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            overflow: hidden;
+        }
+
+        .original{
+            main{
+                background: hsla(0,0%,100%,0.3);
+            }
+        }
+        .bogus{
+            main{
+                position: relative;
+                background: hsla(0,0%,100%,0.3);                
+                .poetry{
+                }
+            }
+            main::before{
+                content: '';
+                position: absolute;
+                top: 0; right: 0; bottom: 0; left: 0;
+                z-index:-1;
+                filter:blur(5px);
+                background: url('../img/leilei.jpg');
+                background-size:500px 500px;
+                background-position: -75px -75px;
+            }
+        }
+    }
+
+    .angular{
+        .back{
+            width: 300px;
+            height: 350px;
+        }
+        .one{
+            background: rgb(215, 236, 139);
+            background: linear-gradient(to left bottom,transparent 50%, rgba(0,0,0,0.6) 0) no-repeat 100% 0 e('/') 2em 2em, linear-gradient(-135deg, transparent 1.41em, rgb(215, 236, 139) 0);
+        }
+    }
+}
