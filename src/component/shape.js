@@ -35,7 +35,7 @@ class Shape extends Component {
                 <div className="angle base">
                     <div className="one">切一个角</div>
                     <div className="four">切四个角</div>
-                    <div className="four-mixin">利用less的mixin切四个角</div>                    
+                    <div className="four-mixin">利用less的mixin切四个角</div>                   
                 </div>
             </div>
         );

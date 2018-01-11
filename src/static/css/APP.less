@@ -2,8 +2,31 @@
 @import "./shape.less";
 @import "./visual.less";
 @import "./layout.less";
+@import "./font.less";
+
+.content{
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+    &>main{
+        flex: 1;
+    }
+    
+    &>footer{
+        color: #fff;
+        background: #333;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+}
+
+
 
 .navigation{
+    background: palegoldenrod;
     & > li {
         display: inline-block;
         margin-right: 5px;

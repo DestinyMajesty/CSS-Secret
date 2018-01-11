@@ -11,4 +11,25 @@
             }
         }
     }
+    .brother{
+        li{
+            display: inline-block;
+            img{
+                width: 100%;
+            }
+        }
+        // 当列表至少包含4项时，命中所以项：
+        li:first-child:nth-last-child(n+4),li:first-child:nth-last-child(n+4)~li {
+            width: 400px;
+        }        
+    }
+    .centermargin{
+        li{
+            list-style: none;
+            padding: 1em;
+            padding: 1em calc(50% e('-') 450px);
+            background: #333;
+            color: #fff;
+        }
+    }
 }
